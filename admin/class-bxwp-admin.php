@@ -3,11 +3,11 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       http://example.com
+ * @link       http://codeart.lk
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin
+ * @package    Bxwp
+ * @subpackage Bxwp/admin
  */
 
 /**
@@ -16,9 +16,9 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin
- * @author     Your Name <email@example.com>
+ * @package    Bxwp
+ * @subpackage Bxwp/admin
+ * @author     Dhanuka Nuwan Gunarathna <dhanuka@codeart.lk>
  */
 class Bxwp_Admin {
 
@@ -83,10 +83,10 @@ class Bxwp_Admin {
 	 */
 
 	public function bxwp_admin_menu() {
-		add_options_page( 'Bxwp Options', 'Bxwp Settings', 'manage_options', 'bxwp_admin_page' );
+		add_menu_page( 'Bxwp Options', 'Bxwp Settings', 'manage_options', 'bxwp_admin_page', array($this, 'bxwp_admin_options') );
 	}
 
-	private function bxwp_admin_options() {
+	public function bxwp_admin_options() {
 		if ( !current_user_can( 'manage_options' ) )  {
 			wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 		}
