@@ -1,4 +1,46 @@
-/**
- * All of the CSS for your admin-specific functionality should be
- * included in this file.
- */
+.full-width{
+	float: left;
+	width: 100%;
+}
+.column{
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.btn{
+	color: #fff;
+	float: left;
+	text-decoration: none;
+	padding: 5px 40px;
+}
+.small-btn{
+	font-size: 12px;
+}
+.btn:hover,.btn:active,.btn:focus{
+	text-decoration: none;
+	color: #fff;
+}
+.blue-btn{
+	background-color: #4A89DC;
+}
+.blue-btn:hover,.blue-btn:active,.blue-btn:focus{
+	background-color: #2A74D6;
+}
+.main-title{
+	float: left;
+	padding-right: 20px;
+}
+.mt10{
+	margin-top: 10px;
+}
+
+@media only screen and (min-width : 768px){
+	.col-8{
+		width: 66.66%;
+	}
+}
+@media only screen and (max-width : 768px){
+	.col-8{
+		width: 100%;
+	}
+}

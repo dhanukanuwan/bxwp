@@ -5,12 +5,21 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       http://example.com
+ * @link       http://codeart.lk
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin/partials
+ * @package    Bxwp
+ * @subpackage Bxwp/admin/partials
  */
-?>
 
-<!-- This file should primarily consist of HTML with a little bit of PHP. -->
+?>
+<div class="wrap">
+	<div class="full-width">
+		<div class="column col-8">
+			<h2 class="main-title">Bxwp - Full Bxslider intergration for WordPress</h2>
+			<a href="javascript:;" class="btn small-btn blue-btn mt10">Add New Slideshow</a>
+		</div>
+	</div>
+</div>
+
+
