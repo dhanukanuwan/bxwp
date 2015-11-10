@@ -16,7 +16,7 @@
 <div class="wrap">
 	<div class="full-width">
 		<div class="column col-8">
-			<h2 class="main-title">Bxwp - Full Bxslider intergration for WordPress</h2>
+			<h1 class="main-title">Bxwp - Full Bxslider intergration for WordPress</h1>
 			<a href="javascript:;" class="btn small-btn blue-btn mt10">Add New Slideshow</a>
 		</div>
 	</div>
