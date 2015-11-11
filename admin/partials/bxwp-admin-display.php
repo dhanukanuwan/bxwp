@@ -13,11 +13,11 @@
  */
 
 ?>
-<div class="wrap">
+<div class="wrap" id="bxwp-wrap">
 	<div class="full-width">
 		<div class="column col-8">
 			<h1 class="main-title">Bxwp - Full Bxslider intergration for WordPress</h1>
-			<a href="javascript:;" class="btn small-btn blue-btn mt10">Add New Slideshow</a>
+			<a id="jsAdd" href="javascript:;" class="btn small-btn blue-btn mt10">Add New Slideshow</a>
 		</div>
 	</div>
 </div>

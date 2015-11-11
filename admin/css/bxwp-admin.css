@@ -1,3 +1,11 @@
+#bxwp-wrap a{
+	-webkit-transition:all 0.5s ease;
+	-moz-transition:all 0.5s ease;
+	-o-transition:all 0.5s ease;
+	-ms-transition:all 0.5s ease;
+	transition:all 0.5s ease;
+}
+
 .full-width{
 	float: left;
 	width: 100%;

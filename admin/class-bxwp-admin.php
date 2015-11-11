@@ -94,4 +94,38 @@ class Bxwp_Admin {
 		include_once 'partials/bxwp-admin-display.php';
 	}
 
+	public function bxwp_post_types(){
+		$args = array(
+			'hierarchical'      => true,
+			'show_ui'           => false,
+			'show_admin_column' => false,
+			'query_var'         => false
+		);
+
+		register_taxonomy( 'bxslide_cats', array( 'bxslides' ), $args ); 
+
+		$args = array(
+			'label'               => __( 'bxslides' ),
+			'taxonomies'          => array('bxslide_cats'),
+			'hierarchical'        => false,
+			'public'              => false,
+			'show_ui'             => false,
+			'show_in_menu'        => false,
+			'show_in_nav_menus'   => false,
+			'show_in_admin_bar'   => false,
+			'can_export'          => true,
+			'publicly_queryable'  => false,
+			'capability_type'     => 'post'
+	 		
+		);
+		register_post_type( 'bxslides', $args );
+	}
+
+	public function bxwp_newslide_callback() {
+		global $wpdb;
+		$whatever = 'test';
+		echo $whatever;
+		wp_die();
+	}
+
 }
