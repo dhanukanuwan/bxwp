@@ -122,10 +122,25 @@ class Bxwp_Admin {
 	}
 
 	public function bxwp_newslide_callback() {
-		global $wpdb;
-		$whatever = 'test';
-		echo $whatever;
+		$newpost_args = array(
+			'post_title' 	=> ' ',
+			'post_content' 	=> ' ',
+			'post_status'	=> 'publish',
+			'post_type'		=> 'bxslides'
+		);
+
+		$newslide = wp_insert_post($newpost_args);
+		echo $newslide;
 		wp_die();
+	}
+
+	public function bxwp_delete_slide_callback(){
+
+		$slideid = wp_kses($_POST['slideid'],'','');
+		wp_delete_post( $slideid, true );
+
+		wp_die();
+
 	}
 
 }

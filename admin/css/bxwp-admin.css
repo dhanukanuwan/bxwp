@@ -41,14 +41,73 @@
 .mt10{
 	margin-top: 10px;
 }
+.slidelist li{
+	background-color: #3bafda;
+	color: #fff;
+	padding: 15px;
+	font-size: 18px;
+	text-transform: capitalize;
+	cursor: pointer;
+	-webkit-transition:all 0.5s ease;
+	-moz-transition:all 0.5s ease;
+	-o-transition:all 0.5s ease;
+	-ms-transition:all 0.5s ease;
+	transition:all 0.5s ease;
+}
+.slidelist li:hover{
+	background-color: #269dc9;
+}
+.edit-icons{
+	float: right;
+}
+.edit-icons a{
+	float: left;
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+	padding-right: 10px;
+}
+.edit-icons a:hover,.edit-icons a:focus{
+	color: #fff;
+	text-decoration: none;
+}
+.edit-icons a span{
+	font-size: 15px;
+	margin-top: 1px;
+	margin-right: -4px;
+}
+.formslide{
+	background-color: #fff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.slidelabel{
+	font-size: 15px;
+	padding-bottom: 5px;
+}
+.forminput{
+	height: 40px;
+	font-size: 15px;
+	padding-left: 10px;
+}
+select.forminput{
+	height: 40px;
+	padding-left: 10px;
+}
+.form-row{
+	padding-bottom: 10px;
+}
 
 @media only screen and (min-width : 768px){
 	.col-8{
 		width: 66.66%;
 	}
+	.col-6{
+		width:47%;
+	}
 }
 @media only screen and (max-width : 768px){
-	.col-8{
+	.col-8,.col-6{
 		width: 100%;
 	}
 }
