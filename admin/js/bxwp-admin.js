@@ -24,13 +24,22 @@
 		});
 
 		// DELETE SLIDE
-
 		jQuery("#js-slidelist").on("click", ".js-delete-slide", function(){
 			var slideid = jQuery(this).attr('slideid');
 			jQuery.post(bx_ajax_object.ajax_url, {'action': 'bxwp_delete_slide','slideid':slideid}, function(data, textStatus, xhr) {
 				jQuery('li#'+slideid).fadeOut();
 				jQuery('li#'+slideid).remove();
 			});
+		});
+
+		//UPDATE SLIDE
+		jQuery("#js-slidelist").on("click", ".publish-slide", function(){
+			var slideid = jQuery(this).attr('slideid');
+			var formdata = jQuery('#form'+slideid).serialize();
+			jQuery.post(bx_ajax_object.ajax_url, {'action': 'bxwp_update_slide','formdata':formdata,'slideid':slideid}, function(data, textStatus, xhr) {
+			  console.log(data);
+			});
+			
 		});
 	});
 

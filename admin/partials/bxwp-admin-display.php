@@ -29,9 +29,10 @@
 								   	$slide_label = $slide->post_title;
 								  endif;
 							?>
-							<li id="<?php echo $slide->ID; ?>">
-								<?php echo $slide_label; ?>
+							<li id="<?php echo $slide->ID; ?>" class="full-width">
+								<span class="slide-title"><?php echo $slide_label; ?></span>
 								<div class="edit-icons">
+									<a href="javascript:;" class="publish-slide" slideid="<?php echo $slide->ID;?>">Update</a>
 									<a href="javascript:;" class="js-edit-slide" title="Edit <?php echo $slide_label; ?>" slideid="<?php echo $slide->ID;?>"><span class="dashicons dashicons-edit"></span> Edit</a>
 									<a href="javascript:;" class="js-delete-slide" title="Delete <?php echo $slide_label; ?>" slideid="<?php echo $slide->ID;?>"><span class="dashicons dashicons-trash"></span> Delete</a>
 								</div>
