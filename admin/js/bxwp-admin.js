@@ -35,9 +35,13 @@
 		//UPDATE SLIDE
 		jQuery("#js-slidelist").on("click", ".publish-slide", function(){
 			var slideid = jQuery(this).attr('slideid');
-			var formdata = jQuery('#form'+slideid).serialize();
-			jQuery.post(bx_ajax_object.ajax_url, {'action': 'bxwp_update_slide','formdata':formdata,'slideid':slideid}, function(data, textStatus, xhr) {
-			  console.log(data);
+			var data = {
+				'action': 'bxwp_update_slide',
+				'slide_name':jQuery('#slide_name').val(),
+				'slideid':slideid
+			}
+			jQuery.post(bx_ajax_object.ajax_url, data, function(response) {
+			  jQuery('li#'+slideid+' .slide-title').text(response);
 			});
 			
 		});

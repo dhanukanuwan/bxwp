@@ -40,16 +40,21 @@
 							<form id="form<?php echo $slide->ID;?>" class="formslide full-width">
 								<div class="full-width form-row">
 									<div class="col-6 column">
-										<label for="slide_name" class="full-width slidelabel">Slide Name</label>
-										<input type="text" name="slide_name" id="slide_name" class="forminput full-width" placeholder="Slide Name" />
+										<label for="slide_name" class="full-width slidelabel">Slideshow Name</label>
+										<input type="text" name="slide_name" id="slide_name" class="forminput full-width" placeholder="Slideshow Name" <?php if(!empty($slide->post_title)){ echo 'value="'.$slide->post_title.'"';}?> />
 									</div>
 									<div class="col-6 column">
-										<label for="slide_type" class="full-width slidelabel">Slide Type</label>
+										<label for="slide_type" class="full-width slidelabel">Slideshow Type</label>
 										<select name="slide_type" id="slide_type" class="forminput full-width">
 											<option value="">Select Option</option>
 											<option value="imageslide">Image Slider</option>
 											<option value="videoslide">Video Slider</option>
 										</select>
+									</div>
+								</div>
+								<div class="full-width form-row">
+									<div class="col-6 column">
+										
 									</div>
 								</div>
 							</form>

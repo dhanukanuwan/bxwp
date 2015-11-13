@@ -142,15 +142,16 @@ class Bxwp_Admin {
 	}
 
 	public function bxwp_update_slide_callback(){
-		$slide_title = wp_kses($_POST['formdata']['slide_name'],'','');
 		$slideid = wp_kses($_POST['slideid'],'','');
-		if(!empty($slide_title)){
-			$response = wp_update_post(array('ID' => $slideid, 'post_title' => $slide_title));
+		$slide_name = wp_kses($_POST['slide_name'],'','');
+		if(!empty($slide_name)){
+			$response = wp_update_post(array('ID' => $slideid, 'post_title' => $slide_name));
 			if($response != 0){
 				$updated_slide = get_post($slideid);
-				//echo $updated_slide->post_title;
+				echo $updated_slide->post_title;
 			}
 		}
+		wp_die();
 	}
 
 }
