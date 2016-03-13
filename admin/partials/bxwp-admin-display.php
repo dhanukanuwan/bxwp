@@ -54,7 +54,16 @@
 								</div>
 								<div class="full-width form-row">
 									<div class="col-6 column">
-										
+										<?php add_thickbox(); ?>
+										<div class="upld-btn-wrap">
+											<label class="upload-btn-label">Add Slides</label>
+											<a href="#TB_inline?width=600&height=550&inlineId=<?php echo $slide->ID; ?>-slide-settings" id="js-upload-btn" class="upload-btn thickbox" name="Slide Settings">
+												<span class="dashicons dashicons-plus"></span>
+											</a>
+										</div>
+										<div id="<?php echo $slide->ID; ?>-slide-settings" style="display:none;">
+											<h1>test</h1>
+										</div>
 									</div>
 								</div>
 							</form>

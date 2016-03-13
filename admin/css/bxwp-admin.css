@@ -109,9 +109,32 @@ select.forminput{
 	padding: 2px 20px !important;
 	margin-right: 10px;
 }
+.upload-btn-label{
+	float: left;
+	font-size: 15px;
+	padding-right: 15px;
+	margin-top: 5px;
+}
+.upload-btn{
+	float: left;
+	color: #fff;
+	background-color:#3bafda;
+	text-decoration: none; 
+	height: 30px;
+	width: 30px;
+}
+.upload-btn:hover{
+	background-color: #269dc9;
+	color: #fff;
+}
+.upload-btn span{
+	margin-top: 6px;
+    margin-left: 4px;
+}
 .col-12{
 	width: 100%;
 }
+
 
 @media only screen and (min-width : 768px){
 	.col-8{
