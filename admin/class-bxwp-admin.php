@@ -128,8 +128,8 @@ class Bxwp_Admin {
 			'post_type'		=> 'bxslides'
 		);
 
-		$newslide = wp_insert_post($newpost_args);
-		echo $newslide;
+		$new_slide_id = wp_insert_post($newpost_args);
+		echo $new_slide_id;
 		wp_die();
 	}
 

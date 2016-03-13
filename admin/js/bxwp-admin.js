@@ -19,7 +19,21 @@
 				html += ' Delete</a>';
 				html += '</div>';
 				html += '</li>';
-				jQuery('#js-slidelist').prepend(html);
+				html += '<form id="form'+post_id+'" class="formslide full-width">';
+				html += '<div class="full-width form-row">';
+				html += '<div class="col-6 column">';
+				html += '<label for="slide_name" class="full-width slidelabel">Slideshow Name</label>';
+				html += '<input type="text" name="slide_name" id="slide_name" class="forminput full-width" placeholder="Slideshow Name" value="'+post_id+'" />';
+				html += '</div>';
+				html += '<div class="col-6 column">';
+				html += '<label for="slide_type" class="full-width slidelabel">Slideshow Type</label>';
+				html += '<select name="slide_type" id="slide_type" class="forminput full-width">';
+				html += '<option value="">Select Option</option><option value="imageslide">Image Slider</option><option value="videoslide">Video Slider</option>';
+				html += '</select></div>'
+				html += '</form>';
+				location.reload();
+				//jQuery('#js-slidelist').prepend(html);
+
 			});
 		});
 
@@ -27,8 +41,9 @@
 		jQuery("#js-slidelist").on("click", ".js-delete-slide", function(){
 			var slideid = jQuery(this).attr('slideid');
 			jQuery.post(bx_ajax_object.ajax_url, {'action': 'bxwp_delete_slide','slideid':slideid}, function(data, textStatus, xhr) {
-				jQuery('li#'+slideid).fadeOut();
-				jQuery('li#'+slideid).remove();
+				location.reload();
+				//jQuery('li#'+slideid).fadeOut();
+				//jQuery('li#'+slideid).remove();
 			});
 		});
 
