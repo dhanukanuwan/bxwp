@@ -153,4 +153,13 @@ class Bxwp_Admin {
 		wp_die();
 	}
 
+	public function bxwp_update_slideshow_type_callback() {
+		$slideid = wp_kses($_POST['slideid'],'','');
+		$slide_type = wp_kses($_POST['slide_type'],'','');
+		if(!empty($slideid) && !empty($slide_type)){
+			update_post_meta($slideid, 'bxwp_slideshow_type', $slide_type);
+		}
+		wp_die();
+	}
+
 }

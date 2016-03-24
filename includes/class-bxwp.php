@@ -159,6 +159,7 @@ class Bxwp {
 		$this->loader->add_action( 'wp_ajax_bxwp_newslide', $plugin_admin, 'bxwp_newslide_callback' );
 		$this->loader->add_action( 'wp_ajax_bxwp_delete_slide', $plugin_admin, 'bxwp_delete_slide_callback' );
 		$this->loader->add_action( 'wp_ajax_bxwp_update_slide', $plugin_admin, 'bxwp_update_slide_callback' );
+		$this->loader->add_action( 'wp_ajax_bxwp_update_slideshow_type', $plugin_admin, 'bxwp_update_slideshow_type_callback' );
 
 	}
 

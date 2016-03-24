@@ -123,7 +123,7 @@ select.forminput{
 	height: 30px;
 	width: 30px;
 }
-.upload-btn:hover{
+.upload-btn:hover,.upload-btn:focus{
 	background-color: #269dc9;
 	color: #fff;
 }
